@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Mich</title>
+
+    <style>
+
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            height: 210vw;
+            width: 100%;
+        }
+
+        .menubackground {
+          position: fixed;
+          width: 100%;
+          height: 100px;
+          background-color: rgba(5, 0, 20, 70%);
+        }
+
+        .container {
+          position: fixed; 
+          right: 50px; 
+          left: 50px;
+          top: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .menu-link {
+           color: antiquewhite;
+           text-decoration: none;
+           margin-left: 16px; 
+           font-size: 18px;
+           font-family: 'Helvetica';
+        }
+
+        .menu-link:hover {
+           color: rgb(140, 155, 219); 
+        }
+
+        .HomeButton {
+          color: antiquewhite;
+          font-family: 'Times New Roman';
+          text-decoration: none;
+          font-size: 25px;
+        }
+
+        .HomeButton:hover {
+          color: rgb(140, 155, 219);
+        }     
+
+        .HEAD {
+            position: absolute;
+            display: flex;
+            align-items: baseline;
+            left: 5vw;
+            right: 5vw;
+            top: 37vh;
+            justify-content: space-between;
+        }
+        
+        .ÜBERSCHRIFT {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 50vw;
+        }
+
+        .TITEL {
+          font-size: 9vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+        }
+
+        .UNTERTITEL {
+          font-size: 0vw;
+          font-family: 'Times New Roman';
+          font-style: italic;
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          margin-top: 18vh;
+        }
+
+        .FlockeFoto {
+            position: absolute;
+            transform: rotateZ(10deg);
+            height: 25vw;
+            right: 7vw;
+            top: -50px;
+        }
+
+        .Abschnitt1 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 5vw;
+            top: 55vw;
+            right: 12vw;
+        }
+
+        .Abschnitt2 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 5vw;
+            left: 12vw;
+            top: 80vw;
+        }
+
+        .Abschnitt3 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 7vw;
+            left: 5vw;
+            top: 105vw;
+        }
+
+        .Abschnitt4 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 7vw;
+            right: 5vw;
+            top: 130vw;
+        }
+
+        .Text1 {
+            color: antiquewhite;
+            font-size: 18px;
+            width: 50vw;
+            font-family: 'Helvetica';
+            line-height: 1.4;
+        }
+
+        .Text2 {
+            color: antiquewhite;
+            font-family: 'Helvetica';
+            font-size: 18px;
+            width: 50vw;
+            left: 0px;
+            line-height: 1.4;
+        }
+
+        .Foto1 {
+            height: 23vw;
+            right: 0px;
+            transform: rotateZ(5deg);
+        }
+
+        .Foto2 {
+            height: 23vw;
+            right: 0px;
+            transform: rotateZ(-7deg);
+
+        }
+
+        .Foto3 {
+            height: 23vw;
+            transform: rotateZ(15deg);
+        }
+
+        .Foto4 {
+            height: 23vw;
+            transform: rotateZ(-4deg);
+        }
+
+        .Kontakt {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 40vw;
+            right: 40vw;
+            top: 195vw
+        }
+
+        .contactlink {
+            font-size: 18px;
+            font-family: 'Helvetica';
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        .contactlink:hover {
+            color: rgb(140, 155, 219);
+
+        }
+
+        .BOTTOM {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0px;
+            right: 0px;
+            top: 165vw;
+        }
+
+        .FotoBottom1 {
+            position: absolute;
+            height: 20vw;
+            left: 39vw;
+            top: 0px;
+            transform: rotateZ(-15deg);
+            box-shadow: -1px -1px 3px rgba(33, 33, 33,50%); 
+            
+
+        }
+
+        .FotoBottom2 {
+            position: absolute;
+            height: 20vw;
+            right: 39vw;
+            top: 0px;
+            transform: rotateZ(13deg);
+            box-shadow: 1px -1px 3px rgba(33, 33, 33,50%); 
+        }
+
+        .FotoBottom3 {
+            position: absolute;
+            height: 20vw;
+            left: 29vw;
+            transform: rotateZ(-7deg);
+            top: 35px;
+        }
+
+        .FotoBottom4 {
+            position: absolute;
+            height: 20vw;
+            right: 29vw;
+            transform: rotateZ(13deg);
+            top: 37px;
+            
+        }
+
+        .Footer {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color: antiquewhite;
+            height: 100px;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        .FooterText {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 40vw;
+            right: 40vw;
+            bottom: 40px;
+        }
+
+        .TextFooter {
+            color: rgb(10, 10, 21);
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Helvetica';
+
+        }
+
+        @media (min-width:320px) {
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            height: 360vw;
+            width: 100%;
+        }
+
+        .menubackground {
+          position: fixed;
+          width: 100%;
+          height: 100px;
+          background-color: rgba(5, 0, 20, 70%);
+        }
+
+        .container {
+          position: fixed; 
+          right: 50px; 
+          left: 50px;
+          top: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .menu-link {
+           color: antiquewhite;
+           text-decoration: none;
+           margin-left: 16px; 
+           font-size: 18px;
+           font-family: 'Helvetica';
+        }
+
+        .menu-link:hover {
+           color: rgb(140, 155, 219); 
+        }
+
+        .HomeButton {
+          color: antiquewhite;
+          font-family: 'Times New Roman';
+          text-decoration: none;
+          font-size: 25px;
+        }
+
+        .HomeButton:hover {
+          color: rgb(140, 155, 219);
+        }     
+
+        .HEAD {
+            position: absolute;
+            display: flex;
+            align-items: baseline;
+            left: 5vw;
+            right: 5vw;
+            top: 50vw;
+            justify-content: space-between;
+        }
+        
+        .ÜBERSCHRIFT {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 50vw;
+        }
+
+        .TITEL {
+          font-size: 9vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+        }
+
+        .UNTERTITEL {
+          font-size: 0vw;
+          font-family: 'Times New Roman';
+          font-style: italic;
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          margin-top: 18vh;
+        }
+
+        .FlockeFoto {
+            position: absolute;
+            transform: rotateZ(10deg);
+            height: 25vw;
+            right: 7vw;
+            top: -20px;
+        }
+
+        .Abschnitt1 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 5vw;
+            top: 120vw;
+            right: 0vw;
+        }
+
+        .Abschnitt2 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 50vw;
+            left: 5vw;
+            top: 155vw;
+        }
+
+        .Abschnitt3 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 0vw;
+            left: 5vw;
+            top: 185vw;
+        }
+
+        .Abschnitt4 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 5vw;
+            right: 50vw;
+            top: 225vw;
+        }
+
+        .Text1 {
+            color: antiquewhite;
+            font-size: 4vw;
+            width: 70vw;
+            font-family: 'Helvetica';
+            line-height: 1.4;
+        }
+
+        .Text2 {
+            color: antiquewhite;
+            font-family: 'Helvetica';
+            font-size: 4vw;
+            width: 70vw;
+            left: 0vw;
+            line-height: 1.4;
+        }
+
+        .Foto1 {
+            height: 0vw;
+            right: 0px;
+            transform: rotateZ(5deg);
+        }
+
+        .Foto2 {
+            height: 0vw;
+            right: 0px;
+            transform: rotateZ(-7deg);
+
+        }
+
+        .Foto3 {
+            height: 0vw;
+            transform: rotateZ(15deg);
+        }
+
+        .Foto4 {
+            height: 0vw;
+            transform: rotateZ(-4deg);
+        }
+
+        .Kontakt {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 15vw;
+            right: 15vw;
+            top: 280vw
+        }
+
+        .contactlink {
+            font-size: 4vw;
+            font-family: 'Helvetica';
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        .contactlink:hover {
+            color: rgb(140, 155, 219);
+
+        }
+
+        .BOTTOM {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0px;
+            right: 0px;
+            top: 165vw;
+        }
+
+        .FotoBottom1 {
+            position: absolute;
+            height: 0vw;
+            left: 39vw;
+            top: 0px;
+            transform: rotateZ(-15deg);
+            box-shadow: -1px -1px 3px rgba(33, 33, 33,50%); 
+            
+
+        }
+
+        .FotoBottom2 {
+            position: absolute;
+            height: 0vw;
+            right: 39vw;
+            top: 0px;
+            transform: rotateZ(13deg);
+            box-shadow: 1px -1px 3px rgba(33, 33, 33,50%); 
+        }
+
+        .FotoBottom3 {
+            position: absolute;
+            height: 0vw;
+            left: 29vw;
+            transform: rotateZ(-7deg);
+            top: 35px;
+        }
+
+        .FotoBottom4 {
+            position: absolute;
+            height: 0vw;
+            right: 29vw;
+            transform: rotateZ(13deg);
+            top: 37px;
+            
+        }
+
+        .Footer {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color: antiquewhite;
+            height: 100px;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        .FooterText {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 30vw;
+            right: 30vw;
+            bottom: 40px;
+        }
+
+        .TextFooter {
+            color: rgb(10, 10, 21);
+            text-decoration: none;
+            font-size: 4vw;
+            font-family: 'Helvetica';
+
+        }
+        }
+
+        @media (min-width:768px) {
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            height: 250vw;
+            width: 100%;
+        }
+
+        .menubackground {
+          position: fixed;
+          width: 100%;
+          height: 100px;
+          background-color: rgba(5, 0, 20, 70%);
+        }
+
+        .container {
+          position: fixed; 
+          right: 50px; 
+          left: 50px;
+          top: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .menu-link {
+           color: antiquewhite;
+           text-decoration: none;
+           margin-left: 16px; 
+           font-size: 18px;
+           font-family: 'Helvetica';
+        }
+
+        .menu-link:hover {
+           color: rgb(140, 155, 219); 
+        }
+
+        .HomeButton {
+          color: antiquewhite;
+          font-family: 'Times New Roman';
+          text-decoration: none;
+          font-size: 25px;
+        }
+
+        .HomeButton:hover {
+          color: rgb(140, 155, 219);
+        }     
+
+        .HEAD {
+            position: absolute;
+            display: flex;
+            align-items: baseline;
+            left: 5vw;
+            right: 5vw;
+            top: 25vw;
+            justify-content: space-between;
+        }
+        
+        .ÜBERSCHRIFT {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 50vw;
+        }
+
+        .TITEL {
+          font-size: 9vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+        }
+
+        .UNTERTITEL {
+          font-size: 0vw;
+          font-family: 'Times New Roman';
+          font-style: italic;
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          margin-top: 18vh;
+        }
+
+        .FlockeFoto {
+            position: absolute;
+            transform: rotateZ(10deg);
+            height: 25vw;
+            right: 7vw;
+            top: -50px;
+        }
+
+        .Abschnitt1 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 5vw;
+            top: 55vw;
+            right: 12vw;
+        }
+
+        .Abschnitt2 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 5vw;
+            left: 12vw;
+            top: 85vw;
+        }
+
+        .Abschnitt3 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 7vw;
+            left: 5vw;
+            top: 115vw;
+        }
+
+        .Abschnitt4 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 7vw;
+            right: 5vw;
+            top: 145vw;
+        }
+
+        .Text1 {
+            color: antiquewhite;
+            font-size: 18px;
+            width: 50vw;
+            font-family: 'Helvetica';
+            line-height: 1.4;
+        }
+
+        .Text2 {
+            color: antiquewhite;
+            font-family: 'Helvetica';
+            font-size: 18px;
+            width: 50vw;
+            left: 0px;
+            line-height: 1.4;
+        }
+
+        .Foto1 {
+            height: 27vw;
+            right: 0px;
+            transform: rotateZ(5deg);
+        }
+
+        .Foto2 {
+            height: 27vw;
+            right: 0px;
+            transform: rotateZ(-7deg);
+
+        }
+
+        .Foto3 {
+            height: 27vw;
+            transform: rotateZ(15deg);
+        }
+
+        .Foto4 {
+            height: 27vw;
+            transform: rotateZ(-4deg);
+        }
+
+        .Kontakt {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 30vw;
+            right: 30vw;
+            top: 225vw
+        }
+
+        .contactlink {
+            font-size: 18px;
+            font-family: 'Helvetica';
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        .contactlink:hover {
+            color: rgb(140, 155, 219);
+
+        }
+
+        .BOTTOM {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0px;
+            right: 0px;
+            top: 185vw;
+        }
+
+        .FotoBottom1 {
+            position: absolute;
+            height: 27vw;
+            left: 34vw;
+            top: 0px;
+            transform: rotateZ(-15deg);
+            box-shadow: -1px -1px 3px rgba(33, 33, 33,50%); 
+            
+
+        }
+
+        .FotoBottom2 {
+            position: absolute;
+            height: 27vw;
+            right: 34vw;
+            top: 0px;
+            transform: rotateZ(13deg);
+            box-shadow: 1px -1px 3px rgba(33, 33, 33,50%); 
+        }
+
+        .FotoBottom3 {
+            position: absolute;
+            height: 27vw;
+            left: 19vw;
+            transform: rotateZ(-7deg);
+            top: 35px;
+        }
+
+        .FotoBottom4 {
+            position: absolute;
+            height: 27vw;
+            right: 19vw;
+            transform: rotateZ(13deg);
+            top: 37px;
+            
+        }
+
+        .Footer {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color: antiquewhite;
+            height: 100px;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        .FooterText {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 40vw;
+            right: 40vw;
+            bottom: 40px;
+        }
+
+        .TextFooter {
+            color: rgb(10, 10, 21);
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Helvetica';
+
+        }
+
+        }
+
+        @media (min-width:1064px) {
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            height: 210vw;
+            width: 100%;
+        }
+
+        .menubackground {
+          position: fixed;
+          width: 100%;
+          height: 100px;
+          background-color: rgba(5, 0, 20, 70%);
+        }
+
+        .container {
+          position: fixed; 
+          right: 50px; 
+          left: 50px;
+          top: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .menu-link {
+           color: antiquewhite;
+           text-decoration: none;
+           margin-left: 16px; 
+           font-size: 18px;
+           font-family: 'Helvetica';
+        }
+
+        .menu-link:hover {
+           color: rgb(140, 155, 219); 
+        }
+
+        .HomeButton {
+          color: antiquewhite;
+          font-family: 'Times New Roman';
+          text-decoration: none;
+          font-size: 25px;
+        }
+
+        .HomeButton:hover {
+          color: rgb(140, 155, 219);
+        }     
+
+        .HEAD {
+            position: absolute;
+            display: flex;
+            align-items: baseline;
+            left: 5vw;
+            right: 5vw;
+            top: 20vh;
+            justify-content: space-between;
+        }
+        
+        .ÜBERSCHRIFT {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 50vw;
+        }
+
+        .TITEL {
+          font-size: 9vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+        }
+
+        .UNTERTITEL {
+          font-size: 0vw;
+          font-family: 'Times New Roman';
+          font-style: italic;
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          margin-top: 18vh;
+        }
+
+        .FlockeFoto {
+            position: absolute;
+            transform: rotateZ(10deg);
+            height: 27vw;
+            right: 7vw;
+            top: -50px;
+        }
+
+        .Abschnitt1 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 5vw;
+            top: 55vw;
+            right: 12vw;
+        }
+
+        .Abschnitt2 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 5vw;
+            left: 12vw;
+            top: 80vw;
+        }
+
+        .Abschnitt3 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 7vw;
+            left: 5vw;
+            top: 105vw;
+        }
+
+        .Abschnitt4 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 7vw;
+            right: 5vw;
+            top: 130vw;
+        }
+
+        .Text1 {
+            color: antiquewhite;
+            font-size: 18px;
+            width: 50vw;
+            font-family: 'Helvetica';
+            line-height: 1.4;
+        }
+
+        .Text2 {
+            color: antiquewhite;
+            font-family: 'Helvetica';
+            font-size: 18px;
+            width: 50vw;
+            left: 0px;
+            line-height: 1.4;
+        }
+
+        .Foto1 {
+            height: 23vw;
+            right: 0px;
+            transform: rotateZ(5deg);
+        }
+
+        .Foto2 {
+            height: 23vw;
+            right: 0px;
+            transform: rotateZ(-7deg);
+
+        }
+
+        .Foto3 {
+            height: 23vw;
+            transform: rotateZ(15deg);
+        }
+
+        .Foto4 {
+            height: 23vw;
+            transform: rotateZ(-4deg);
+        }
+
+        .Kontakt {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 40vw;
+            right: 40vw;
+            top: 195vw
+        }
+
+        .contactlink {
+            font-size: 18px;
+            font-family: 'Helvetica';
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        .contactlink:hover {
+            color: rgb(140, 155, 219);
+
+        }
+
+        .BOTTOM {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0px;
+            right: 0px;
+            top: 165vw;
+        }
+
+        .FotoBottom1 {
+            position: absolute;
+            height: 20vw;
+            left: 39vw;
+            top: 0px;
+            transform: rotateZ(-15deg);
+            box-shadow: -1px -1px 3px rgba(33, 33, 33,50%); 
+            
+
+        }
+
+        .FotoBottom2 {
+            position: absolute;
+            height: 20vw;
+            right: 39vw;
+            top: 0px;
+            transform: rotateZ(13deg);
+            box-shadow: 1px -1px 3px rgba(33, 33, 33,50%); 
+        }
+
+        .FotoBottom3 {
+            position: absolute;
+            height: 20vw;
+            left: 29vw;
+            transform: rotateZ(-7deg);
+            top: 35px;
+        }
+
+        .FotoBottom4 {
+            position: absolute;
+            height: 20vw;
+            right: 29vw;
+            transform: rotateZ(13deg);
+            top: 37px;
+            
+        }
+
+        .Footer {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color: antiquewhite;
+            height: 100px;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        .FooterText {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 40vw;
+            right: 40vw;
+            bottom: 40px;
+        }
+
+        .TextFooter {
+            color: rgb(10, 10, 21);
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Helvetica';
+
+        }
+        }
+
+        @media (min-width:1200px) {
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            height: 210vw;
+            width: 100%;
+        }
+
+        .menubackground {
+          position: fixed;
+          width: 100%;
+          height: 100px;
+          background-color: rgba(5, 0, 20, 70%);
+        }
+
+        .container {
+          position: fixed; 
+          right: 50px; 
+          left: 50px;
+          top: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .menu-link {
+           color: antiquewhite;
+           text-decoration: none;
+           margin-left: 16px; 
+           font-size: 18px;
+           font-family: 'Helvetica';
+        }
+
+        .menu-link:hover {
+           color: rgb(140, 155, 219); 
+        }
+
+        .HomeButton {
+          color: antiquewhite;
+          font-family: 'Times New Roman';
+          text-decoration: none;
+          font-size: 25px;
+        }
+
+        .HomeButton:hover {
+          color: rgb(140, 155, 219);
+        }     
+
+        .HEAD {
+            position: absolute;
+            display: flex;
+            align-items: baseline;
+            left: 5vw;
+            right: 5vw;
+            top: 37vh;
+            justify-content: space-between;
+        }
+        
+        .ÜBERSCHRIFT {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 50vw;
+        }
+
+        .TITEL {
+          font-size: 9vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+        }
+
+        .UNTERTITEL {
+          font-size: 0vw;
+          font-family: 'Times New Roman';
+          font-style: italic;
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          margin-top: 18vh;
+        }
+
+        .FlockeFoto {
+            position: absolute;
+            transform: rotateZ(10deg);
+            height: 25vw;
+            right: 7vw;
+            top: -50px;
+        }
+
+        .Abschnitt1 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 5vw;
+            top: 55vw;
+            right: 12vw;
+        }
+
+        .Abschnitt2 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 5vw;
+            left: 12vw;
+            top: 80vw;
+        }
+
+        .Abschnitt3 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            right: 7vw;
+            left: 5vw;
+            top: 105vw;
+        }
+
+        .Abschnitt4 {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 7vw;
+            right: 5vw;
+            top: 130vw;
+        }
+
+        .Text1 {
+            color: antiquewhite;
+            font-size: 18px;
+            width: 50vw;
+            font-family: 'Helvetica';
+            line-height: 1.4;
+        }
+
+        .Text2 {
+            color: antiquewhite;
+            font-family: 'Helvetica';
+            font-size: 18px;
+            width: 50vw;
+            left: 0px;
+            line-height: 1.4;
+        }
+
+        .Foto1 {
+            height: 23vw;
+            right: 0px;
+            transform: rotateZ(5deg);
+        }
+
+        .Foto2 {
+            height: 23vw;
+            right: 0px;
+            transform: rotateZ(-7deg);
+
+        }
+
+        .Foto3 {
+            height: 23vw;
+            transform: rotateZ(15deg);
+        }
+
+        .Foto4 {
+            height: 23vw;
+            transform: rotateZ(-4deg);
+        }
+
+        .Kontakt {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 40vw;
+            right: 40vw;
+            top: 195vw
+        }
+
+        .contactlink {
+            font-size: 18px;
+            font-family: 'Helvetica';
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        .contactlink:hover {
+            color: rgb(140, 155, 219);
+
+        }
+
+        .BOTTOM {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0px;
+            right: 0px;
+            top: 165vw;
+        }
+
+        .FotoBottom1 {
+            position: absolute;
+            height: 20vw;
+            left: 39vw;
+            top: 0px;
+            transform: rotateZ(-15deg);
+            box-shadow: -1px -1px 3px rgba(33, 33, 33,50%); 
+            
+
+        }
+
+        .FotoBottom2 {
+            position: absolute;
+            height: 20vw;
+            right: 39vw;
+            top: 0px;
+            transform: rotateZ(13deg);
+            box-shadow: 1px -1px 3px rgba(33, 33, 33,50%); 
+        }
+
+        .FotoBottom3 {
+            position: absolute;
+            height: 20vw;
+            left: 29vw;
+            transform: rotateZ(-7deg);
+            top: 35px;
+        }
+
+        .FotoBottom4 {
+            position: absolute;
+            height: 20vw;
+            right: 29vw;
+            transform: rotateZ(13deg);
+            top: 37px;
+            
+        }
+
+        .Footer {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color: antiquewhite;
+            height: 100px;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        .FooterText {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            left: 40vw;
+            right: 40vw;
+            bottom: 40px;
+        }
+
+        .TextFooter {
+            color: rgb(10, 10, 21);
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'Helvetica';
+
+        }
+
+        }
+
+
+
+
+
+
+
+
+
+        </style>
+
+</head>
+<body>
+
+    <div class="Hintergrund">
+
+        <div class="Abschnitt1">
+
+            <p class="Text1">
+                Ich wurde in Saarbrücken geboren und habe 2025 an der Hochschule der Bildenden Künste Saar meinen Bachelor in Media Art & Design
+                gemacht. 
+            </p>
+
+            <img class="Foto1" src="img/Charlie5.png">
+
+        </div>
+
+        <div class="Abschnitt2">
+
+            <img class="Foto2" src="img/Flocke2.png">
+
+            <p class="Text2">
+                In meinem Studium habe ich mich hauptsächlich auf Animation und Storytelling konzentriert.
+            </p>
+
+        </div>
+
+        <div class="Abschnitt3">
+
+            <p class="Text1">
+                Ab Juli 2022 habe ich ein dreimonatiges Praktikum bei BeckerBredel Fotografen absolviert und im Anschluss dort bis August 2023
+                als studentische Hilfskraft im Bereich Grafik und Bildbearbeitung geabreitet.
+            </p>
+                
+            <img class="Foto3" src="img/Charlie2.png">
+                
+        </div>
+
+        <div class="Abschnitt4">
+
+            <img class="Foto4" src="img/Flocke5.png">
+
+            <p class="Text2">
+                In meiner Freizeit lese und schreibe ich gern. Darüber hinaus fotografiere ich gerne, vor allem meine Katzen.
+            </p>
+
+        </div>
+
+        <div class="Kontakt">
+            <p><a class="contactlink" href="https://www.youtube.com/@SaraRink">YouTube</a></p>
+            <p><a class="contactlink" href="https://www.instagram.com/saras.artelier/?hl=de">Instagram</a></p>
+            <p><a class="contactlink" href="mailto:sararink.animation@gmail.com">Email</a></p>
+        </div>
+
+        <div class="BOTTOM">
+
+            <img class="FotoBottom4" src="img/Bratina1.png">
+
+            <img class="FotoBottom3" src="img/Charlie6.png">
+
+            <img class="FotoBottom1" src="img/Flocke3.png">
+
+            <img class="FotoBottom2" src="img/Charlie3.png">
+
+
+        </div>
+
+        <div class="HEAD">
+
+            <img class="FlockeFoto" src="img/Charlie1.png">
+
+            <div class="ÜBERSCHRIFT">
+
+                <b class="TITEL">Über Mich</b> 
+                <p class="UNTERTITEL">wer bin ich denn eigentlich?</p>
+
+            </div>
+
+        </div>
+
+        <div class="menubackground">
+            <div class="container">
+        
+                <a class="HomeButton" href="index.html">SR</a>
+          
+                <div>
+                <a class="menu-link" href="Arbeiten.html">Arbeiten</a>
+                <a class="menu-link" href="UeberMich.html">Über mich</a> 
+                </div>
+        
+            </div>
+        </div>
+
+        <div class="Footer">
+
+
+            <div class="FooterText">
+                <p class="TextFooter">&copy;</p>
+                <p class="TextFooter">2025</p>
+                <p class="TextFooter">Sara Rink</p>
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</body>
+</html>

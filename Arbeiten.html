@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeiten</title>
+
+     <style>
+
+        * {
+        margin: 0;
+        padding: 0;
+        }
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 530%;
+            width: 100vw;
+        }
+
+        .menubackground {
+        position: fixed;
+        width: 100%;
+        height: 100px;
+        top: 0px;
+        background-color: rgba(5, 0, 20, 70%);
+        }
+
+        .container {
+          position: fixed; 
+          right: 5vw; 
+          left: 5vw;
+          top: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .menu-link {
+           color: antiquewhite;
+           font-family: 'Helvetica';
+           text-decoration: none;
+           margin-left: 16px; 
+           font-size: 18px;
+        }
+
+        .menu-link:hover {
+           color: rgb(140, 155, 219); 
+        }
+
+        .HomeButton {
+          color: antiquewhite;
+          text-decoration: none;
+          font-size: 25px;
+          font-family: 'Times New Roman';
+        }
+
+        .HomeButton:hover {
+          color: rgb(140, 155, 219);
+        } 
+
+        .Footer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: antiquewhite;
+        height: 100px;
+        width: 100vw;
+        bottom: 0px;
+        }
+
+        .FooterText {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        left: 43vw;
+        right: 43vw;
+        bottom: 40px;
+        }
+
+        .TextFooter {
+        color: rgb(10, 10, 21);
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Helvetica';
+
+        }
+
+        .TITEL {
+        font-size: 9vw;
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        position: absolute;
+        top: 37vh;
+        left: 5vw;
+        }
+
+        .UNTERTITEL {
+        font-size: 3.5vw;
+        font-family: 'Times New Roman';
+        font-style: italic;
+        color: antiquewhite;
+        position: absolute;
+        left: 5vw;
+        top: 55vh;
+        }
+
+        .RANKEN {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 800px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnailR {
+        position: absolute;
+        height: 250px;   
+        top: 0px;
+        right: 0px; 
+        box-shadow: 1px 1px 20px #b92f27;  
+        float: right;
+        border-radius: 10px;
+        }
+
+        .thumbnailR:hover {
+        box-shadow: 1px 1px 80px #b92f27;
+
+        }
+
+        .SONNE {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 1300px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_S {
+        position: absolute;
+        height: 250px;   
+        right: 0px;  
+        top: 0px;
+        box-shadow: 1px 1px 20px #f8c300;   
+        border-radius: 10px;
+        }
+
+        .thumbnail_S:hover {
+        box-shadow: 1px 1px 80px #f8c300;   
+        }
+
+        .TEDDY {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 1800px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_T {
+        position: absolute;
+        border-radius: 6px;
+        height: 400px;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 30px #77aa72 
+        }
+
+        .thumbnail_T:hover {
+        box-shadow: 1px 1px 90px #77aa72 
+        }
+
+        .KATZENSCHRECK {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 2400px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_K1 {
+        position: absolute;
+        height: 250px;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 20px antiquewhite;  
+        border-radius: 10px;
+        }
+
+        .thumbnail_K1:hover {
+        box-shadow: 1px 1px 80px antiquewhite; 
+        }
+
+        .GHOST {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 2900px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_G {
+        position: absolute;
+        height: 250px;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 20px #803738; 
+        border-radius: 10px; 
+        }
+
+        .thumbnail_G:hover {
+        box-shadow: 1px 1px 80px #803738; 
+
+        }
+
+        .MEOW {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 3400px;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_M {
+        position: absolute;
+        height: 400px;   
+        right: 0px;
+        top: 0px;
+        box-shadow: 1px 1px 20px white; 
+        border-radius: 6px;
+
+        }
+        
+        .thumbnail_M:hover {
+        box-shadow: 1px 1px 80px white;  
+        }
+
+        .Text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .Überschrift {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .FilmTitel {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 7vw;
+        margin-right: 25px;
+        text-decoration: none;
+        }
+
+        .FilmTitel:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 25px;
+        }
+
+        .Beschreibung {
+        font-family: 'Helvetica';
+        color: antiquewhite;
+        font-size: 18px;
+        margin-top: 130px;
+        width: 57vw;
+        }
+
+        .Text_R {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        width: 60vw;
+        }
+
+        .Überschrift_R {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        }
+
+        .FilmTitel_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 90px;
+        margin-right: 25px;
+        text-decoration: none;
+        }
+
+        .FilmTitel_R:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 25px;
+        }
+
+        .Beschreibung_R {
+        color: antiquewhite;
+        font-family: 'Helvetica';
+        font-size: 18px;
+        margin-top: 130px;
+        width: 57vw;
+        }
+
+        @media (min-width: 320px) {
+
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 700vw;
+            width: 100vw;
+        }
+
+        .Footer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: antiquewhite;
+        height: 100px;
+        width: 100vw;
+        bottom: 0px;
+        }
+
+        .FooterText {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        left: 30vw;
+        right: 30vw;
+        bottom: 40px;
+        }
+
+        .TextFooter {
+        color: rgb(10, 10, 21);
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Helvetica';
+
+        }
+
+        .TITEL {
+        font-size: 20vw;
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        position: absolute;
+        top: 20vh;
+        left: 3vw;
+        }
+
+        .UNTERTITEL {
+        font-size: 0vw;
+        font-family: 'Times New Roman';
+        font-style: italic;
+        color: antiquewhite;
+        position: absolute;
+        left: 3vw;
+        top: 40vh;
+        }
+
+        .RANKEN {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 150vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        }
+
+        .thumbnailR {
+        position: absolute;
+        height: 50vw;   
+        top: 0px;
+        bottom: 0px;
+        right: 0vw; 
+        box-shadow: 1px 1px 20px #b92f27;  
+        border-radius: 10px;
+        }
+
+        .thumbnailR:hover {
+        box-shadow: 1px 1px 80px #b92f27;
+
+        }
+
+        .SONNE {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 215vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_S {
+        position: absolute;
+        height: 50vw;   
+        right: 0vw;  
+        top: 0px;
+        box-shadow: 1px 1px 20px #f8c300;   
+        border-radius: 10px;
+        }
+
+        .thumbnail_S:hover {
+        box-shadow: 1px 1px 80px #f8c300;   
+        }
+
+        .TEDDY {
+        position: absolute;
+        right: 10vw;
+        left: 10vw;
+        top: 280vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_T {
+        position: absolute;
+        border-radius: 6px;
+        height: 110vw;   
+        right: 0vw; 
+        top: 0px;
+        box-shadow: 1px 1px 30px #77aa72 
+        }
+
+        .thumbnail_T:hover {
+        box-shadow: 1px 1px 90px #77aa72 
+        }
+
+        .KATZENSCHRECK {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 410vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_K1 {
+        position: absolute;
+        height: 50vw;   
+        right: 0vw; 
+        top: 0px;
+        box-shadow: 1px 1px 20px antiquewhite;  
+        border-radius: 10px;
+        }
+
+        .thumbnail_K1:hover {
+        box-shadow: 1px 1px 80px antiquewhite; 
+        }
+
+        .GHOST {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 475vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_G {
+        position: absolute;
+        height: 50vw;   
+        right: 0vw; 
+        top: 0px;
+        box-shadow: 1px 1px 20px #803738; 
+        border-radius: 10px; 
+        }
+
+        .thumbnail_G:hover {
+        box-shadow: 1px 1px 80px #803738; 
+
+        }
+
+        .MEOW {
+        position: absolute;
+        right: 10vw;
+        left: 10vw;
+        top: 540vw;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_M {
+        position: absolute;
+        height: 110vw;   
+        right: 0vw;
+        top: 0px;
+        box-shadow: 1px 1px 20px white; 
+        border-radius: 6px;
+
+        }
+        
+        .thumbnail_M:hover {
+        box-shadow: 1px 1px 80px white;  
+        }
+
+        .Text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .Überschrift {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .FilmTitel {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 0vw;
+        margin-right: 0px;
+        text-decoration: none;
+        }
+
+        .FilmTitel:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 0px;
+        }
+
+        .Beschreibung {
+        font-family: 'Helvetica';
+        color: antiquewhite;
+        font-size: 0px;
+        }
+
+        .Text_R {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        width: 60vw;
+        }
+
+        .Überschrift_R {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        width: 40vw;
+        }
+
+        .FilmTitel_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 0vw;
+        margin-right: 0px;
+        text-decoration: none;
+        }
+
+        .FilmTitel_R:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 0px;
+        }
+
+        .Beschreibung_R {
+        color: antiquewhite;
+        font-family: 'Helvetica';
+        font-size: 0px;
+
+        }
+        }
+
+        @media (min-width: 768px) {
+
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 530%;
+            width: 100vw;
+        }
+        
+        .Footer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: antiquewhite;
+        height: 100px;
+        width: 100vw;
+        bottom: 0px;
+        }
+
+        .FooterText {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        left: 40vw;
+        right: 40vw;
+        bottom: 40px;
+        }
+
+        .TextFooter {
+        color: rgb(10, 10, 21);
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Helvetica';
+
+        }
+
+        .TITEL {
+        font-size: 15vw;
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        position: absolute;
+        top: 40vh;
+        left: 10vw;
+        }
+
+        .UNTERTITEL {
+        font-size: 0vw;
+        font-family: 'Times New Roman';
+        font-style: italic;
+        color: antiquewhite;
+        position: absolute;
+        left: 10vw;
+        top: 60vh;
+        }
+
+        .RANKEN {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 800px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnailR {
+            position: absolute;
+        height: 30vw;   
+        top: 0px;
+        bottom: 0px;
+        right: 0px; 
+        box-shadow: 1px 1px 20px #b92f27;  
+        border-radius: 10px;
+        }
+
+        .thumbnailR:hover {
+        box-shadow: 1px 1px 80px #b92f27;
+
+        }
+
+        .SONNE {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 1300px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_S {
+        position: absolute;
+        height: 30vw;   
+        right: 0px;  
+        top: 0px;
+        box-shadow: 1px 1px 20px #f8c300;   
+        border-radius: 10px;
+        }
+
+        .thumbnail_S:hover {
+        box-shadow: 1px 1px 80px #f8c300;   
+        }
+
+        .TEDDY {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 1800px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_T {
+        position: absolute;
+        border-radius: 6px;
+        height: 400px;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 30px #77aa72 
+        }
+
+        .thumbnail_T:hover {
+        box-shadow: 1px 1px 90px #77aa72 
+        }
+
+        .KATZENSCHRECK {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 2400px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_K1 {
+        position: absolute;
+        height: 30vw;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 20px antiquewhite;  
+        border-radius: 10px;
+        }
+
+        .thumbnail_K1:hover {
+        box-shadow: 1px 1px 80px antiquewhite; 
+        }
+
+        .GHOST {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 2900px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_G {
+        position: absolute;
+        height: 30vw;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 20px #803738; 
+        border-radius: 10px; 
+        }
+
+        .thumbnail_G:hover {
+        box-shadow: 1px 1px 80px #803738; 
+
+        }
+
+        .MEOW {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 3400px;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_M {
+        position: absolute;
+        height: 400px;   
+        right: 0px;
+        top: 0px;
+        box-shadow: 1px 1px 20px white; 
+        border-radius: 6px;
+
+        }
+        
+        .thumbnail_M:hover {
+        box-shadow: 1px 1px 80px white;  
+        }
+
+        .Text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .Überschrift {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .FilmTitel {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 5vw;
+        margin-right: 25px;
+        text-decoration: none;
+        }
+
+        .FilmTitel:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 0px;
+        }
+
+        .Beschreibung {
+        font-family: 'Helvetica';
+        color: antiquewhite;
+        font-size: 0px;
+
+
+        }
+
+        .Text_R {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        width: 60vw;
+        }
+
+        .Überschrift_R {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        width: 40vw;
+        }
+
+        .FilmTitel_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 5vw;
+        margin-right: 25px;
+        text-decoration: none;
+        }
+
+        .FilmTitel_R:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 0px;
+        }
+
+        .Beschreibung_R {
+        color: antiquewhite;
+        font-family: 'Helvetica';
+        font-size: 0px;
+
+        }
+
+
+        }
+
+        @media (min-width:1064px) {
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 530%;
+            width: 100vw;
+        }
+            
+        .Footer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: antiquewhite;
+        height: 100px;
+        width: 100vw;
+        bottom: 0px;
+        }
+
+        .FooterText {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        left: 40vw;
+        right: 40vw;
+        bottom: 40px;
+        }
+
+        .TextFooter {
+        color: rgb(10, 10, 21);
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Helvetica';
+
+        }
+
+        .TITEL {
+        font-size: 12vw;
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        position: absolute;
+        top: 40vh;
+        left: 5vw;
+        }
+
+        .UNTERTITEL {
+        font-size: 0vw;
+        font-family: 'Times New Roman';
+        font-style: italic;
+        color: antiquewhite;
+        position: absolute;
+        left: 5vw;
+        top: 60vh;
+        }
+
+        .RANKEN {
+        position: absolute;
+        right: 3vw;
+        left: 3vw;
+        top: 800px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnailR {
+        position: absolute;
+        height: 23vw;   
+        top: 0px;
+        right: 0px; 
+        box-shadow: 1px 1px 20px #b92f27;  
+        float: right;
+        border-radius: 10px;
+        }
+
+        .thumbnailR:hover {
+        box-shadow: 1px 1px 80px #b92f27;
+
+        }
+
+        .SONNE {
+        position: absolute;
+        right: 3vw;
+        left: 3vw;
+        top: 1300px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_S {
+        position: absolute;
+        height: 23vw;   
+        right: 0px;  
+        top: 0px;
+        box-shadow: 1px 1px 20px #f8c300;   
+        border-radius: 10px;
+        }
+
+        .thumbnail_S:hover {
+        box-shadow: 1px 1px 80px #f8c300;   
+        }
+
+        .TEDDY {
+        position: absolute;
+        right: 3vw;
+        left: 3vw;
+        top: 1800px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_T {
+        position: absolute;
+        border-radius: 6px;
+        height: 40vw;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 30px #77aa72 
+        }
+
+        .thumbnail_T:hover {
+        box-shadow: 1px 1px 90px #77aa72 
+        }
+
+        .KATZENSCHRECK {
+        position: absolute;
+        right: 3vw;
+        left: 3vw;
+        top: 2400px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_K1 {
+        position: absolute;
+        height: 23vw;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 20px antiquewhite;  
+        border-radius: 10px;
+        }
+
+        .thumbnail_K1:hover {
+        box-shadow: 1px 1px 80px antiquewhite; 
+        }
+
+        .GHOST {
+        position: absolute;
+        right: 3vw;
+        left: 3vw;
+        top: 2900px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_G {
+        position: absolute;
+        height: 23vw;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 20px #803738; 
+        border-radius: 10px; 
+        }
+
+        .thumbnail_G:hover {
+        box-shadow: 1px 1px 80px #803738; 
+
+        }
+
+        .MEOW {
+        position: absolute;
+        right: 3vw;
+        left: 3vw;
+        top: 3400px;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_M {
+        position: absolute;
+        height: 40vw;   
+        right: 0px;
+        top: 0px;
+        box-shadow: 1px 1px 20px white; 
+        border-radius: 6px;
+
+        }
+        
+        .thumbnail_M:hover {
+        box-shadow: 1px 1px 80px white;  
+        }
+
+        .Text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .Überschrift {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .FilmTitel {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 7vw;
+        margin-right: 25px;
+        text-decoration: none;
+        }
+
+        .FilmTitel:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 0px;
+        }
+
+        .Beschreibung {
+        font-family: 'Helvetica';
+        color: antiquewhite;
+        font-size: 18px;
+        width: 45vw;
+        }
+
+        .Text_R {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        width: 60vw;
+        }
+
+        .Überschrift_R {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0px;
+        width: 60vw;
+        }
+
+        .FilmTitel_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 7vw;
+        margin-right: 25px;
+        text-decoration: none;
+        }
+
+        .FilmTitel_R:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 0px;
+        }
+
+        .Beschreibung_R {
+        color: antiquewhite;
+        font-family: 'Helvetica';
+        font-size: 18px;
+        width: 45vw;
+        }
+
+        }
+
+
+        @media (min-width:1200px) {
+        
+
+        .Hintergrund {
+            background-color: rgb(10, 10, 21);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 210vw;
+            width: 100vw;
+        }
+
+        .Footer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        background-color: antiquewhite;
+        height: 100px;
+        width: 100vw;
+        bottom: 0px;
+        }
+
+        .FooterText {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        left: 43vw;
+        right: 43vw;
+        bottom: 40px;
+        }
+
+        .TextFooter {
+        color: rgb(10, 10, 21);
+        text-decoration: none;
+        font-size: 18px;
+        font-family: 'Helvetica';
+
+        }
+
+        .TITEL {
+        font-size: 9vw;
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        position: absolute;
+        top: 37vh;
+        left: 5vw;
+        }
+
+        .UNTERTITEL {
+        font-size: 0vw;
+        font-family: 'Times New Roman';
+        font-style: italic;
+        color: antiquewhite;
+        position: absolute;
+        left: 5vw;
+        top: 55vh;
+        }
+
+        .RANKEN {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 60vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnailR {
+        position: absolute;
+        height: 13vw;   
+        top: 0px;
+        right: 0px; 
+        box-shadow: 1px 1px 20px #b92f27;  
+        float: right;
+        border-radius: 10px;
+        }
+
+        .thumbnailR:hover {
+        box-shadow: 1px 1px 80px #b92f27;
+
+        }
+
+        .SONNE {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 80vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_S {
+        position: absolute;
+        height: 13vw;   
+        right: 0px;  
+        top: 0px;
+        box-shadow: 1px 1px 20px #f8c300;   
+        border-radius: 10px;
+        }
+
+        .thumbnail_S:hover {
+        box-shadow: 1px 1px 80px #f8c300;   
+        }
+
+        .TEDDY {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 100vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_T {
+        position: absolute;
+        border-radius: 6px;
+        height: 23vw;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 30px #77aa72 
+        }
+
+        .thumbnail_T:hover {
+        box-shadow: 1px 1px 90px #77aa72 
+        }
+
+        .KATZENSCHRECK {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 130vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_K1 {
+        position: absolute;
+        height: 13vw;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 20px antiquewhite;  
+        border-radius: 10px;
+        }
+
+        .thumbnail_K1:hover {
+        box-shadow: 1px 1px 80px antiquewhite; 
+        }
+
+        .GHOST {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 150vw;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_G {
+        position: absolute;
+        height: 13vw;   
+        right: 0px; 
+        top: 0px;
+        box-shadow: 1px 1px 20px #803738; 
+        border-radius: 10px; 
+        }
+
+        .thumbnail_G:hover {
+        box-shadow: 1px 1px 80px #803738; 
+
+        }
+
+        .MEOW {
+        position: absolute;
+        right: 5vw;
+        left: 5vw;
+        top: 170vw;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        }
+
+        .thumbnail_M {
+        position: absolute;
+        height: 23vw;   
+        right: 0px;
+        top: 0px;
+        box-shadow: 1px 1px 20px white; 
+        border-radius: 6px;
+
+        }
+        
+        .thumbnail_M:hover {
+        box-shadow: 1px 1px 80px white;  
+        }
+
+        .Text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .Überschrift {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        bottom: 0px;
+        }
+
+        .FilmTitel {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 7vw;
+        margin-right: 25px;
+        text-decoration: none;
+        }
+
+        .FilmTitel:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr {
+        font-family: 'Times New Roman';
+        color: antiquewhite;
+        font-size: 25px;
+        }
+
+        .Beschreibung {
+        font-family: 'Helvetica';
+        color: antiquewhite;
+        font-size: 18px;
+        margin-top: 17vh;
+        width: 57vw;
+        line-height: 1.4;
+        }
+
+        .Text_R {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 0px;
+        width: 60vw;
+        }
+
+        .Überschrift_R {
+        position: absolute;
+        display: flex;
+        align-items: baseline;
+        top: 0px;
+        }
+
+        .FilmTitel_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 7vw;
+        margin-right: 25px;
+        text-decoration: none;
+        }
+
+        .FilmTitel_R:hover {
+        color: rgb(140, 155, 219);
+        }
+
+        .Jahr_R {
+        color: antiquewhite;
+        font-family: 'Times New Roman';
+        font-size: 25px;
+        }
+
+        .Beschreibung_R {
+        color: antiquewhite;
+        font-family: 'Helvetica';
+        font-size: 18px;
+        margin-top: 17vh;
+        width: 57vw;
+        line-height: 1.4;
+        }
+
+        }
+
+
+        
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="Hintergrund">
+
+        <b class="TITEL">Arbeiten</b>
+        <p class="UNTERTITEL">Animationen & Storytelling</p>
+
+
+
+        <div class="RANKEN">
+
+
+            <div class="Text">
+
+                <div class="Überschrift">
+
+                    <b><a class="FilmTitel" href="https://www.youtube.com/watch?v=At-rN6uJAtI">Ranken</a></b>
+                    <p class="Jahr">2025</p>
+
+                </div>
+
+                <p class="Beschreibung" >In diesem kurzen Animationsfilm kämpft eine junge Frau gegen eine Pflanze, die ihr Leben vergiftet.
+                    Auf metaphorischer Ebene beschäftigt sich der Film mit gewaltvollen Beziehungen, von denen zum Großteil weibliche Personen
+                    betroffen sind. 
+                </p>
+
+            </div>
+
+            <a href="https://www.youtube.com/watch?v=At-rN6uJAtI">
+
+                <img class="thumbnailR" src="img/ranken_thumbnail.png">
+
+            </a>
+
+
+        </div>
+
+
+
+        <div class="SONNE">
+
+
+            <div class="Text_R">
+
+                <div class="Überschrift_R">
+
+                    <b><a class="FilmTitel_R" href="https://www.youtube.com/watch?v=eBvGkt-7P6o">Der Sonne so nah</a></b>
+                    <p class="Jahr_R">2025</p>
+
+                </div>
+
+                <p class="Beschreibung_R" >Dieser Kurzfilm beschäftigt sich mit dem Innenleben einer heranwachsenden Sonnenblume. Ein innerer Monolog begleitet
+                    die Handlung und erzählt von ihren Träumen und Hoffnungen. Ganz oben steht die Sonne, bei der sie sein will.
+                </p>
+
+            </div>
+
+            <a href="https://www.youtube.com/watch?v=eBvGkt-7P6o">
+                
+                <img class="thumbnail_S" src="img/sonne_thumbnail.png">
+
+            </a>
+
+
+
+        </div>
+
+
+
+
+        <div class="TEDDY">
+
+
+            <div class="Text">
+
+                <div class="Überschrift">
+
+                    <b><a class="FilmTitel" href="Comics/Teddy_Comic.pdf">Teddy</a></b>
+                    <p class="Jahr">2024</p>
+
+                </div>
+
+                <p class="Beschreibung" >Ein egoistischer kleiner Kater möchte seine Freiehit genießen und nimmt dabei jedes Risiko & die Verletzung anderer in Kauf.
+                    Bis ihn sein Schicksal einholt...
+                </p>
+
+            </div>
+
+            <a href="Comics/Teddy_Comic.pdf">
+
+                <img class="thumbnail_T" src="img/teddy_thumbnail.png">
+
+            </a>
+
+        </div>
+
+
+
+
+        <div class="KATZENSCHRECK">
+
+
+            <div class="Text">
+
+                <div class="Überschrift">
+
+                    <b><a class="FilmTitel" href="https://www.youtube.com/watch?v=GLvhRQ8PSw4">Katzenschreck</a></b>
+                    <p class="Jahr">2024</p>
+
+                </div>
+
+                <p class="Beschreibung" >Diese Katze hat alles unter Kontrolle und bleibt total entspannt. Immer! Garantiert. Sie würde doch niemals
+                    die Fassung verlieren...
+                </p>
+
+            </div>
+
+            <a href="https://www.youtube.com/watch?v=GLvhRQ8PSw4">
+
+                <img class="thumbnail_K1" src="img/katze1_thumbnail.jpg">
+
+            </a>
+
+        </div>
+
+
+
+
+        <div class="GHOST">
+
+
+            <div class="Text">
+
+                <div class="Überschrift">
+
+                    <b><a class="FilmTitel" href="https://www.youtube.com/watch?v=3d-z8R7srU4">ghoststory</a></b>
+                    <p class="Jahr">2023</p>
+
+                </div>
+
+                <p class="Beschreibung" >Ein kleines Gespenst schleicht sich Nachts aus seinem Spukhaus, um in der Welt der Menschen herumzufliegen,
+                    Unfug anzustellen und Spaß zu haben.
+                </p>
+
+            </div>
+
+            <a href="https://www.youtube.com/watch?v=3d-z8R7srU4">
+
+                <img class="thumbnail_G" src="img/ghost_thumbnail.png">
+
+            </a>
+
+        </div>
+
+
+
+
+        <div class="MEOW">
+
+
+            <div class="Text">
+
+                <div class="Überschrift">
+
+                    <b><a class="FilmTitel" href="Comics/Meow_Comic.pdf">meow?</a></b>
+                    <p class="Jahr">2022</p>
+
+                </div>
+
+                <p class="Beschreibung" >Eine kleine Katze lebt als Wohnungskatze gefangen in einem Haus. Ihr Wunsch nach der Außenwelt ist so groß, dass sie sich einfach
+                    davon macht um ihr eigenes Abenteuer zu erleben.
+                </p>
+
+            </div>
+
+            <a href="Comics/Meow_Comic.pdf">
+
+                <img class="thumbnail_M" src="img/meow_thumbnail.png">
+
+            </a>
+
+        </div>
+
+
+            <div class="menubackground">
+                <div class="container">
+        
+                    <a class="HomeButton" href="index.html">SR</a>
+          
+                    <div>
+                        <a class="menu-link" href="Arbeiten.html">Arbeiten</a>
+                        <a class="menu-link" href="UeberMich.html">Über mich</a> 
+                    </div>
+        
+                </div>
+            </div>
+
+        <div class="Footer">
+
+            <div class="FooterText">
+
+                <p class="TextFooter">&copy;</p>
+                <p class="TextFooter">2025</p>
+                <p class="TextFooter">Sara Rink</p>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+   
+   <style>
+
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        html, body {
+          height: 105%;
+        }
+
+        .Hintergrund {
+          position: absolute;
+          filter: brightness(70%);
+          width: 100vw;
+          height: 100vh;
+        }
+
+        .AllBackground {
+          background-color: #050624;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 111%;
+          width: 100vw;
+        }
+
+        .menubackground {
+          position: fixed;
+          width: 100%;
+          height: 100px;
+          background-color: rgba(5, 0, 20, 70%);
+        }
+
+        .container {
+          position: fixed; 
+          right: 5vw; 
+          left: 5vw;
+          top: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .menu-link {
+           color: antiquewhite;
+           font-family: 'Helvetica';
+           text-decoration: none;
+           margin-left: 16px; 
+           font-size: 18px;
+        }
+
+        .menu-link:hover {
+           color: rgb(140, 155, 219); 
+        }
+
+        .HomeButton {
+          color: antiquewhite;
+          font-family: 'Times New Roman';
+          text-decoration: none;
+          font-size: 25px;
+        }
+
+        .HomeButton:hover {
+          color: rgb(140, 155, 219);
+        }  
+
+        .Foot {
+          position: absolute;
+          bottom: 0px;
+          height: 100px;
+          width: 100vw;
+          bottom: 0px;
+
+        }
+        
+        .FooterBackground {
+          position: absolute;
+          background-color: #050624;
+          filter: brightness(70%);
+          height: 100px;
+          width: 100vw;
+          bottom: 0px;
+        }
+
+        .Footer {
+          position: absolute;
+          right: 40vw;
+          left: 40vw;
+          bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .TextBottom {
+          font-family: 'Helvetica';
+          color: antiquewhite;
+          font-size: 18px;
+          bottom: 0px;
+
+        }
+
+        .TITEL {
+          font-size: 9vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          top: 300px;
+          left: 50px;
+        }
+
+        .UNTERTITEL {
+          font-size: 3.5vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          left: 50px;
+          top: 425px;
+        }
+
+        @media (min-width: 320px) {
+          .TITEL {
+          font-size: 25vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          top: 20vh;
+          left: 20vw;
+          }
+
+          .UNTERTITEL {
+          font-size: 12vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          left: 20vw;
+          top: 70vh;
+          }
+
+
+          .Hintergrund {
+            position: absolute;
+            filter: brightness(70%);
+            width: 100vw;
+            height: 105vh;
+
+          }
+
+          .Footer {
+          position: absolute;
+          right: 30vw;
+          left: 30vw;
+          bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          }
+
+
+        }
+
+        @media (min-width: 768px) {
+          .TITEL {
+          font-size: 15vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          top: 40vh;
+          left: 10vw;
+          }
+
+          .UNTERTITEL {
+          font-size: 6vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          left: 10vw;
+          top: 60vh;
+
+          } 
+
+          .Footer {
+          position: absolute;
+          right: 40vw;
+          left: 40vw;
+          bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          }
+
+          .Hintergrund {
+          position: absolute;
+          filter: brightness(70%);
+          width: 100vw;
+          height: 105vh;
+
+          }
+
+        
+          
+        }
+
+        @media (min-width: 1064px) {
+          .TITEL {
+          font-size: 12vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          top: 40vh;
+          left: 5vw;
+          }
+
+          .UNTERTITEL {
+          font-size: 5vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          left: 5vw;
+          top: 60vh;
+          }
+
+          .Footer {
+          position: absolute;
+          right: 40vw;
+          left: 40vw;
+          bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .Hintergrund {
+          position: absolute;
+          filter: brightness(70%);
+          width: 100vw;
+          height: 105vh;
+
+        }
+
+        }
+
+        @media (min-width: 1200px) {
+          .TITEL {
+          font-size: 9vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          top: 37vh;
+          left: 5vw;
+          }
+
+          .UNTERTITEL {
+          font-size: 3.5vw;
+          font-family: 'Times New Roman';
+          color: antiquewhite;
+          text-decoration: none;
+          position: absolute;
+          left: 5vw;
+          top: 55vh;
+          }
+
+          .Footer {
+          position: absolute;
+          right: 43vw;
+          left: 43vw;
+          bottom: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .Hintergrund {
+          position: absolute;
+          filter: brightness(70%);
+          width: 100vw;
+          height: 105vh;
+
+        }
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+  <div class="AllBackground">
+  
+    <img class="Hintergrund" src="img/titlepage.jpg">
+
+
+      <b class="TITEL">Sara Rink</b>
+      <b class="UNTERTITEL">Portfolio</b>
+    
+
+      <div class="menubackground">
+        <div class="container">
+          
+          <a class="HomeButton" href="index.html">SR</a>
+            
+          <div>
+            <a class="menu-link" href="Arbeiten.html">Arbeiten</a>
+            <a class="menu-link" href="UeberMich.html">Über mich</a> 
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="Foot">
+      
+        <div class="FooterBackground"></div>
+
+        <div class="Footer">
+
+          <p class="TextBottom">&copy;</p>
+          <p class="TextBottom">2025</p>
+          <p class="TextBottom">Sara Rink</p>
+    
+        </div>
+
+      </div>
+
+  </div>
+
+</body>
+</html>
